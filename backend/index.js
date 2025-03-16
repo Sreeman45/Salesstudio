@@ -79,4 +79,4 @@ app.get("/claim", (req, res) => {
     code: coupons[i++],
   });
 });
-app.listen(8080, () => console.log("running..."));
+export default app;
