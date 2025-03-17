@@ -7,7 +7,10 @@ dotenv.config();
 const app = express();
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors())
+app.use(cors({
+  origin:'https://salesstudio.vercel.app/',
+  credentials:true
+}))
 let usersIp = [];
 const coupons = [
   "ABCDEF5678",
