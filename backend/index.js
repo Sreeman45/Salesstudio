@@ -82,4 +82,5 @@ app.get("/claim", (req, res) => {
     code: coupons[i++],
   });
 });
+
 export default app;
