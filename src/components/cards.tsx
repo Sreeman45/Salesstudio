@@ -11,7 +11,7 @@ export default function Cards(){
                  setcouponcode(data.code)
                 setMessage('Claim Successful')
                }
-               else if(!data.sucess){
+               else if(!data.success){
                     setMessage(data.message)
                     setClaim(false)
                }
