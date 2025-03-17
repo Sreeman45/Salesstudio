@@ -7,10 +7,7 @@ dotenv.config();
 const app = express();
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors({
-  credentials:true
-  
-}))
+app.use(cors())
 let usersIp = [];
 const coupons = [
   "ABCDEF5678",
