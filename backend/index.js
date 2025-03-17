@@ -10,7 +10,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
 
-    origin: 'https://salesstudio.vercel.app/',
+    origin: 'https://salesstudio.vercel.app',
     credentials: true, 
   }))
 let usersIp = [];
@@ -72,7 +72,7 @@ app.get("/claim", (req, res) => {
       maxAge: 60 * 60 * 1000,
       httpOnly: true,
       secure: true,
-      sameSite: "None",
+      sameSite:'none',
     });
   } catch (err) {
     console.log(err);
