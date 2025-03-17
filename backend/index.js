@@ -82,5 +82,6 @@ app.get("/claim", (req, res) => {
     code: coupons[i++],
   });
 });
-
+const PORT = process.env.PORT || 5000;
+app.listen(PORT,()=>console.log('listening'))
 export default app;
