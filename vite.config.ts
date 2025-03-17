@@ -6,10 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
 
   plugins: [react(),tailwindcss()],
-  server:{
-    proxy:{
-      '/claim':'https://salesstudio-9n5r.vercel.app/'
-    }
-  }
+ 
   
 })
