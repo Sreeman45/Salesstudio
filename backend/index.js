@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors({credentials:true}))
+app.use(cors())
 let usersIp = [];
 const coupons = [
   "ABCDEF5678",
@@ -65,7 +65,6 @@ app.get("/claim", (req, res) => {
     const token = jwt.sign(date, process.env.key);
     res.cookie("token", token, {
       maxAge: 60 * 60 * 1000,
-      httpOnly: true,
       secure: true,
       sameSite:'none',
     });
