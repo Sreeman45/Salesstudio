@@ -8,7 +8,6 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
-  origin:'https://salesstudio.vercel.app',
   credentials:true
   
 }))
@@ -71,7 +70,8 @@ app.get("/claim", (req, res) => {
       maxAge: 60 * 60 * 1000,
       secure: true,
       sameSite:'none',
-      httpOnly:true
+      httpOnly:true,
+      
     });
   } catch (err) {
     console.log(err);
