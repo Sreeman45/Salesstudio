@@ -8,8 +8,9 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
-  origin:'https://salesstudio-7rdux0xgn-sreemans-projects.vercel.app/claim',
+  origin:'https://salesstudio.vercel.app/',
   credentials:true
+  
 }))
 let usersIp = [];
 const coupons = [
@@ -77,7 +78,7 @@ app.get("/claim", (req, res) => {
   }
   if (i > coupons.length - 1) {
     i = 0;
-  }
+  } 
   return res.json({
     success: true,
     message: "Sucess",
