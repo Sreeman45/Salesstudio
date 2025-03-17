@@ -8,7 +8,11 @@ dotenv.config();
 const app = express();
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors())
+app.use(cors({
+
+    origin: 'https://salesstudio.vercel.app/',
+    credentials: true, 
+  }))
 let usersIp = [];
 const coupons = [
   "ABCDEF5678",
@@ -68,7 +72,7 @@ app.get("/claim", (req, res) => {
       maxAge: 60 * 60 * 1000,
       httpOnly: true,
       secure: true,
-      sameSite: "none",
+      sameSite: "None",
     });
   } catch (err) {
     console.log(err);
