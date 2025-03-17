@@ -5,7 +5,7 @@ export default function Cards(){
     const [claim,setClaim]=useState(false)
     const sendrequest=()=>{
          
-         fetch('https://salesstudio-7rdux0xgn-sreemans-projects.vercel.app/claim',{credentials:'include'}).then((res)=>res.json()).then((data)=>{
+         fetch('https://salesstudio-7rdux0xgn-sreemans-projects.vercel.app/claim').then((res)=>res.json()).then((data)=>{
                if(data.success){
                 setClaim(true)
                  setcouponcode(data.code)
